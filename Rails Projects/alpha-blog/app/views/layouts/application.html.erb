@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!-- Might need this for responsive design, but it doesn't look like it's working -->
+    <!-- Might need this for responsive design, but it doesn't look like it's working for navbar -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   </head>
@@ -33,6 +33,19 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 offset-md-4">
+          <% flash.each do |name, msg| %>
+            <ul>
+              <li>
+                <%= msg %>
+              </li>
+            </ul>
+          <% end %>
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container-fluid -->
     <%= yield %>
   </body>
 </html>
