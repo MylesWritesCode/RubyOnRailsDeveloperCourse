@@ -17,14 +17,14 @@
           <%= link_to 'HOME', root_path, class: "nav-link" %>
         </div>
         <div class="nav-item">
-          <%= link_to 'ABOUT', about_path, class: "nav-link" %>
+          <%= link_to 'ARTICLES', articles_path, class: "nav-link" %>
         </div>
         <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
           <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <%= link_to 'ABOUT', about_path, class: "dropdown-item" %>
           </div>
         </div>
       </div>
