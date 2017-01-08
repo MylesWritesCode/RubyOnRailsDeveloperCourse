@@ -10,16 +10,16 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      flash[:notice] = "Article was successfully created."
+      flash[:success] = "Article was successfully created."
       redirect_to article_path(@article)
     else
-      flash[:notice] = Article.errors.full_messages
+      flash[:warning] = Article.errors.full_messages
       render :new
     end
   end
 
   def show
-    @article = Article.find(param[:id])
+    @article = Article.find(params[:id])
   end
 
   private
