@@ -1,8 +1,8 @@
 class ArticlesController < ApplicationController
   def index
     # index.html.erb
-
   end
+
   def new
     @article = Article.new
   end
@@ -16,6 +16,10 @@ class ArticlesController < ApplicationController
       flash[:notice] = Article.errors.full_messages
       render :new
     end
+  end
+
+  def show
+    @article = Article.find(param[:id])
   end
 
   private
