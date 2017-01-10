@@ -1,9 +1,11 @@
 <div class="container">
+  <h1 class="text-center">Articles</h1><br>
   <table class="table">
     <thead>
       <tr>
         <th>Title</th>
         <th>Description</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -11,6 +13,12 @@
       <tr>
         <td><%= article.title %></td>
         <td><%= article.description %></td>
+        <td>
+          <%= link_to "Edit", edit_article_path(article.id), class: "btn btn-secondary" %>
+          <%= link_to "View", article_path(article.id), class: "btn btn-secondary" %>
+          <%= link_to "Delete", {action: "delete", id: article.id },
+              method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+        </td>
       </tr>
       <% end %>
     </tbody>
