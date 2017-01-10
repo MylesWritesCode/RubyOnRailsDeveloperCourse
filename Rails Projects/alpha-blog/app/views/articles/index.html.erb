@@ -1,3 +1,18 @@
-<% @articles.each do |article| %>
-  <!-- Do something with each article -->
-<% end %>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.description %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div> <!-- container -->
