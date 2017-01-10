@@ -1,3 +1,9 @@
-Aloha! This is the article show.html.erb file.
-<p> <%= @article.title %> </p>
-<p> <%= @article.description %> </p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1 class="text-center">View Article</h1>
+      <h3 class="text-center"> <%= @article.title %> </h3>
+      <p> <%= @article.description %> </p>
+    </div>
+  </div>
+</div>

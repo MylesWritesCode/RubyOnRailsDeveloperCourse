@@ -1,26 +1,43 @@
-<div class="container">
-  <h1 class="text-center">Articles</h1><br>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.description %></td>
-        <td>
-          <%= link_to "Edit", edit_article_path(article.id), class: "btn btn-secondary" %>
-          <%= link_to "View", article_path(article.id), class: "btn btn-secondary" %>
-          <%= link_to "Delete", {action: "delete", id: article.id },
-              method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
-        </td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!-- Perhaps a sidebar? -->
+    </div>
+    <div class="col-md-8">
+      <h1 class="text-center">Articles</h1>
+      <div class="col-md-4 offset-md-4">
+        <%= link_to "New Article", new_article_path, class: "btn btn-primary text-center btn-lg btn-block" %>
+      </div>
+      <br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>View</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @articles.each do |article| %>
+          <tr>
+            <td><%= article.title %></td>
+            <td><%= article.description %></td>
+            <td>
+              <%= link_to "Edit", edit_article_path(article.id), class: "btn btn-secondary btn-sm" %>
+            </td>
+            <td>
+              <%= link_to "View", article_path(article.id), class: "btn btn-secondary btn-sm" %>
+            </td>
+            <td>
+              <%= link_to "Delete", article_path(article.id), method: :delete,
+                  data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div> <!-- col-md-8 -->
+  </div> <!-- row -->
 </div> <!-- container -->
