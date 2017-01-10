@@ -10,7 +10,11 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   </head>
   <body>
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded mb-5">
+    <% if current_page?(root_path) %>
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded mb-5">
+    <% else %>
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded mb-5">
+    <% end %>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
