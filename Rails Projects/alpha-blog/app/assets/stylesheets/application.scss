@@ -13,6 +13,10 @@
 
 @import "bootstrap-custom";
 
+body {
+  position: relative;
+}
+
 .article-description {
   resize: none;
   height: 300px;
@@ -27,4 +31,11 @@
   background-size: cover;
   background-position: top;
   height: 130%;
+}
+
+footer {
+  position: fixed;
+  height: 40px;
+  bottom: 0;
+  width: 100%;
 }
