@@ -23,7 +23,7 @@
           <% @articles.each do |article| %>
           <tr>
             <td><%= article.title %></td>
-            <td><%= article.description %></td>
+            <td><%= truncate(article.description, length: 100) %></td>
             <td>
               <%= link_to "Edit", edit_article_path(article.id), class: "btn btn-secondary btn-sm" %>
             </td>
