@@ -3,39 +3,31 @@
     <div class="col-md-2">
       <!-- Perhaps a sidebar? -->
     </div>
-    <div class="col-md-8">
+    <div class="col-md-6 offset-md-1">
       <h1 class="text-center">Articles</h1>
       <div class="col-md-4 offset-md-4">
         <%= link_to "New Article", new_article_path, class: "btn btn-primary text-center btn-lg btn-block" %>
       </div>
       <br>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th class="text-center table-actions" colspan="3">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @articles.each do |article| %>
-          <tr>
-            <td><%= truncate(article.title, length: 50) %></td>
-            <td><%= truncate(article.description, length: 100) %></td>
-            <td class="text-center align-middle">
+      <% @articles.each do |article| %>
+        <div class="jumbotron p-4">
+          <div class="container">
+            <h3><%= article.title %></h3>
+            <p>by
+              <span class="text-muted font-italic">
+                <%= article.user_id %>
+              </span>
+            </p>
+            <br><hr>
+            <%= article.description %>
+            <p class="text-right">
               <%= link_to "Edit", edit_article_path(article.id), class: "btn btn-secondary btn-sm" %>
-            </td>
-            <td class="text-center align-middle">
               <%= link_to "View", article_path(article.id), class: "btn btn-secondary btn-sm" %>
-            </td>
-            <td class="text-center align-middle">
-              <%= link_to "Delete", article_path(article.id), method: :delete,
-                  data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
-            </td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
+              <%= link_to "Delete", article_path(article.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
+            </p>
+          </div>
+        </div>
+      <% end %>
     </div> <!-- col-md-8 -->
   </div> <!-- row -->
 </div> <!-- container -->
