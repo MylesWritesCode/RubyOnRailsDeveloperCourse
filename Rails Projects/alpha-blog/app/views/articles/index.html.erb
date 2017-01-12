@@ -12,13 +12,9 @@
       <% @articles.each do |article| %>
         <div class="jumbotron p-4">
           <div class="container">
-            <h3><%= article.title %></h3>
-            <p>by
-              <span class="text-muted font-italic">
-                <%= article.user_id %>
-              </span>
-            </p>
-            <br><hr>
+            <h3><%= link_to article.title, article_path(article.id) %></h3>
+            <%= article.user.username if article.user %>
+            <hr>
             <%= article.description %>
             <p class="text-right">
               <%= link_to "Edit", edit_article_path(article.id), class: "btn btn-secondary btn-sm" %>
