@@ -5,11 +5,17 @@
         <div class="form-group">
           <div class="form-group" id="formGroupTitle">
             <%= f.label :title, class: "form-control-label", for: "title" %>
-            <%= f.text_field :title, class: "form-control form-control-warning", id: "title" %>
+            <%= f.text_field :title, class: "form-control form-control-warning", id: "title", maxlength: 50 %>
           </div>
           <div class="form-group" id="formGroupDesc">
             <%= f.label :description, class: "form-control-label", for: "description" %>
-            <%= f.text_area :description, class: "form-control form-control-warning article-description", id: "description" %>
+            <%= f.text_area :description, class: "form-control form-control-warning article-description",
+                id: "description", maxlength: 140 %>
+          </div>
+          <div class="form-group" id="formGroupBody">
+            <%= f.label :body, class: "form-control-label", for: "body" %>
+            <%= f.text_area :body, class: "form-control form-control-warning article-body",
+                id: "description", maxlength: 1000 %>
           </div>
           <%= f.submit "Submit", class: "btn btn-primary btn-lg btn-block", id: "btnSubmitArticle" %>
         </div>
