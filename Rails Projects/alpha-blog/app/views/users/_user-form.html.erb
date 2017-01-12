@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <%= form_for @user, html: { id: "userForm" } do |f| %>
+        <div class="form-group">
+          <div class="form-group" id="formGroupUsername">
+            <%= f.label :username, class: "form-control-label", for: "username" %>
+            <%= f.text_field :username, class: "form-control form-control-warning", id: "username", maxlength: 50 %>
+          </div>
+          <div class="form-group" id="formGroupEmail">
+            <%= f.label :email, class: "form-control-label", for: "email" %>
+            <%= f.text_field :email, class: "form-control form-control-warning", id: "email", maxlength: 50 %>
+          </div>
+          <div class="form-group" id="formGroupPassword">
+            <%= f.label :password, class: "form-control-label", for: "password" %>
+            <%= f.password_field :password, class: "form-control", id: "password" %>
+          </div>
+          <%= f.submit "Sign Up", class: "btn btn-primary btn-lg btn-block", id: "btnSubmitUser" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
