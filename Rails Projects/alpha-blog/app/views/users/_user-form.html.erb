@@ -15,7 +15,7 @@
             <%= f.label :password, class: "form-control-label", for: "password" %>
             <%= f.password_field :password, class: "form-control", id: "password" %>
           </div>
-          <%= f.submit "Sign Up", class: "btn btn-primary btn-lg btn-block", id: "btnSubmitUser" %>
+          <%= f.submit(@user.new_record? ? "Sign Up" : "Submit", class: "btn btn-primary btn-lg btn-block", id: "btnSubmitUser") %>
         </div>
       <% end %>
     </div>
