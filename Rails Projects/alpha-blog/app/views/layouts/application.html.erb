@@ -34,7 +34,11 @@
         <% if logged_in? %>
           <div class="dropdown mr-1">
             <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Profile
+              <% if current_user.admin? %>
+                ADMIN
+              <% else %>
+                Profile
+              <% end %>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <div class="nav-item">

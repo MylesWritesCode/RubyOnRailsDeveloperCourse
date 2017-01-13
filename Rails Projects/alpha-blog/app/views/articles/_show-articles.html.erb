@@ -3,13 +3,15 @@
     <div class="jumbotron p-4">
       <div class="container">
         <h3><%= link_to article.title, article_path(article.id) %></h3>
-         <em>
-           by <%= link_to article.user.username, user_path(article.user) %>
-        </em>
+          <% if article.user %>
+           <em>
+             by <%= link_to article.user.username, user_path(article.user) %>
+          </em>
+          <% end %>
         <hr>
         <%= article.description %>
         <p class="text-right">
-          <% if  logged_in? && current_user == article.user %>
+          <% if  logged_in? && (current_user == article.user || current_user.admin?) %>
             <%= link_to "Edit", edit_article_path(article.id), class: "btn btn-secondary btn-sm" %>
             <%= link_to "View", article_path(article.id), class: "btn btn-secondary btn-sm" %>
             <%= link_to "Delete", article_path(article.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
