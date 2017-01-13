@@ -1,0 +1,12 @@
+<h1 class="text-center">Public Profile</h1>
+<div class="col-md-4 offset-md-4">
+  <hr>
+  <%= @user.username %>
+  <em>Public Profile</em>
+  <%= gravatar_for @user %>
+  <h3 class="text-center">
+    <%= @user.username %>'s Articles
+  </h3>
+  <hr>
+  <%= render '/articles/show-articles', obj: @user.articles %>
+</div>
