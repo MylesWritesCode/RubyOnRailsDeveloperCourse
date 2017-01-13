@@ -38,10 +38,10 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <div class="nav-item">
-                <%= link_to 'VIEW', user_path(current_user), class: "dropdown-item" %>
+                <%= link_to 'VIEW', user_path(current_user.id), class: "dropdown-item" %>
               </div>
               <div class="nav-item">
-                <%= link_to 'EDIT', edit_user_path(current_user), class: "dropdown-item" %>
+                <%= link_to 'EDIT', edit_user_path(current_user.id), class: "dropdown-item" %>
               </div>
             </div>
           </div> <!-- dropdown -->
