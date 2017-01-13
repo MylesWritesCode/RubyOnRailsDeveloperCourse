@@ -9,5 +9,8 @@
     <%= @user.username %>'s Articles
   </h3>
   <hr>
-  <%= render '/articles/show-articles', obj: @user.articles %>
+  <div class="userArticles" id="userArticles">
+    <%= render '/articles/show-articles', obj: @user_articles %>
+    <%= will_paginate @user_articles %>
+  </div>
 </div>

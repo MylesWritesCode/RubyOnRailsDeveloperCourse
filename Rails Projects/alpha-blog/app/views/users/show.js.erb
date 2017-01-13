@@ -1,0 +1,2 @@
+$('#userArticles').append("<%= escape_javascript render('/articles/show-articles', obj: @user_articles) %>");
+$('.pagination').replaceWith("<%= escape_javascript will_paginate(@user_articles) %>");
