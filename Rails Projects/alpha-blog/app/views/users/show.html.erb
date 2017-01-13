@@ -1,9 +1,10 @@
 <h1 class="text-center">Public Profile</h1>
 <div class="col-md-4 offset-md-4">
   <hr>
-  <%= @user.username %>
-  <em>Public Profile</em>
-  <%= gravatar_for @user %>
+  <h2 class="text-center"><%= @user.username %><h2>
+  <p class="text-center">
+    <%= gravatar_for @user %>
+  </p><br>
   <h3 class="text-center">
     <%= @user.username %>'s Articles
   </h3>
