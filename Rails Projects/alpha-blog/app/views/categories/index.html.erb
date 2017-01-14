@@ -1,1 +1,25 @@
-Categories: INDEX
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!-- Perhaps a sidebar? -->
+    </div>
+    <div class="col-md-6 offset-md-1">
+      <h1 class="text-center">Categories</h1>
+      <div class="col-md-4 offset-md-4">
+        <% if logged_in? %>
+          <%= link_to "New Category", new_category_path, class: "btn btn-primary text-center btn-lg btn-block" %>
+        <% end %>
+      </div>
+      <br>
+      <div class="categories" id="categories">
+        <% @categories.each do |c| %>
+          <div class="jumbotron p-4">
+            <div class="container">
+              <h3><%= link_to "#{c.name}", category_path(c) %></h3>
+            </div>
+          </div>
+        <% end %>
+      </div> <!-- categories #categories -->
+    </div> <!-- col-md-8 -->
+  </div> <!-- row -->
+</div> <!-- container -->
