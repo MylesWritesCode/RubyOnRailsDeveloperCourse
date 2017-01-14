@@ -11,11 +11,14 @@
         <% end %>
       </div>
       <br>
-      <div class="categories" id="categories">
+      <div class="list-group categories" id="categories">
         <% @categories.each do |c| %>
           <div class="jumbotron p-4">
             <div class="container">
-              <h3><%= link_to "#{c.name}", category_path(c) %></h3>
+              <h3>
+                <%= link_to "#{c.name}", category_path(c) %>
+                <span class="badge badge-default badge-pill pull-right">Articles</span>
+              </h3>
             </div>
           </div>
         <% end %>
