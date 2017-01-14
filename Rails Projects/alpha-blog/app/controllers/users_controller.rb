@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :show]
+  before_action :set_user, only: [:edit, :update, :show, :make_admin]
   before_action :require_same_user, only: [:edit, :update, :destroy]
   before_action :require_admin, only: [:destroy]
 
@@ -26,6 +26,12 @@ class UsersController < ApplicationController
   end
 
   def edit
+
+  end
+
+  def make_admin
+    @user.toggle!(:admin)
+    redirect_to users_path
   end
 
   def update

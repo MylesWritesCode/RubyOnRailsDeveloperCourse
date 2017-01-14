@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   resources :users, except: [:new]
   get 'signup', to: 'users#new'
+  post 'admin/:id' => 'users#make_admin', as: "make_admin"
   # START sessions
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
