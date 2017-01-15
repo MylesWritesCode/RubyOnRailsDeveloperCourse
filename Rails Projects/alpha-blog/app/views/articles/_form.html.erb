@@ -19,7 +19,7 @@
           </div>
           <div class="form-group" id="formGroupCategories">
             <h4 class="text-center mb-3">Categories</h4>
-            <%= collection_select( :id, :category_ids, Category.all, :id, :name, {}, { class: "categorySelect form-control", id: "categorySelect", multiple: true } ) %>
+            <%= f.collection_select(:category_ids, Category.all, :id, :name, {}, { class: "categorySelect form-control", id: "categorySelect", multiple: true } ) %>
           </div>
           <%= f.submit "Submit", class: "btn btn-primary btn-lg btn-block", id: "btnSubmitArticle" %>
         </div>
