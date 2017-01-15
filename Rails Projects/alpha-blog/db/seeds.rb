@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+(1..5).each do |i|
+  Article.create!(
+    title: "Sports Article #{i}",
+    description: "This is a sports description.",
+    body: "This is a body for a sports article.",
+    user_id: 35,
+    category_ids: [1])
+end

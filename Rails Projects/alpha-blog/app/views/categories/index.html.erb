@@ -17,7 +17,11 @@
             <div class="container">
               <h3>
                 <%= link_to "#{c.name}", category_path(c) %>
-                <span class="badge badge-default badge-pill pull-right">Articles</span>
+                <span class="badge badge-default badge-pill">
+                  <small>
+                    <%= pluralize(c.articles.count, "Article") %>
+                  </small>
+                </span>
               </h3>
             </div>
           </div>

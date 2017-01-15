@@ -12,6 +12,11 @@
       <p> <strong>Description: </strong><%= @article.description %> </p>
       <hr>
       <p> <%= @article.body %> </p>
+      <% if @article.categories.any? %>
+        <p>
+          <%= render @article.categories %>
+        </p>
+      <% end %>
     </div>
   </div>
 </div>
