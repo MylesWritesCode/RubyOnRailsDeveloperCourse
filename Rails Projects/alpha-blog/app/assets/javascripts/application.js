@@ -12,8 +12,7 @@
 //
 //= require jquery
 //= require bootstrap
-//= require jquery-ui
-//= require jquery_ujs
+//  require jquery_ujs
 //= require turbolinks
 //= require jquery.infinite-pages
 //= require_self
@@ -21,17 +20,18 @@
 
 
 $(document).ready(function() {
-  // // For Endless Pagination with will_paginate
-  // if ($('.pagination').length) {
-  //   $(window).scroll(function() {
-  //     var url = $('.pagination .next_page').attr('href');
-  //     if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 50) {
-  //       $('.pagination').text("Loading...");
-  //       return $.getScript(url);
-  //     }
-  //   });
-  //   return $(window).scroll();
-  // }
+
+  // For Endless Pagination with will_paginate
+  if ($('.pagination').length) {
+    $(window).scroll(function() {
+      var url = $('a[rel=next]').attr('href');
+      if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 50) {
+        $('.pagination').text("Loading...");
+        return $.getScript(url);
+      }
+    });
+    return $(window).scroll();
+  }
 
   // For Chosen jQuery UI Autocomplete
   $("#categorySelect").chosen({

@@ -1,3 +1,11 @@
-// Users Index
-$('#usersIndex').append("<%= escape_javascript render('show-users') %>");
-$('.pagination').replaceWith("<%= escape_javascript will_paginate(@users) %>");
+// Append new data
+$("<%= j render('show-users') %>")
+  .appendTo($("#usersIndex"));
+
+// Update pagination link
+<% if @lessons.last_page? %>
+  $('.pagination').html("That's all, folks!");
+<% else %>
+  $('.pagination')
+    .html("<%= j link_to_next_page(@users, 'Next Page', remote: true) %>");
+<% end %>

@@ -1,3 +1,11 @@
-// Users Show
-$('#showUserArticles').append("<%= escape_javascript render('/articles/show-articles', obj: @user_articles) %>");
-$('.pagination').replaceWith("<%= escape_javascript will_paginate(@user_articles) %>");
+// Append new data
+$("<%= j render('articles/show-articles', obj: @user_articles) %>")
+  .appendTo($("#showUserArticles"));
+
+// Update pagination link
+<% if @articles.last_page? %>
+  $('.pagination').html("That's all, folks!");
+<% else %>
+  $('.pagination')
+    .html("<%= j link_to_next_page(@user_articles, 'Next Page', remote: true) %>");
+<% end %>

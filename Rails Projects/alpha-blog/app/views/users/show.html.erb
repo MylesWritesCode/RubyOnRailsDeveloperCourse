@@ -17,5 +17,5 @@
   <div class="showUserArticles" id="showUserArticles">
     <%= render '/articles/show-articles', obj: @user_articles %>
   </div>
-  <%= will_paginate @user_articles %>
+  <%= paginate @user_articles, remote: true %>
 </div>
