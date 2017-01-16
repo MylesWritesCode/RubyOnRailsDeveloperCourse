@@ -11,9 +11,7 @@
         <% end %>
       </div>
       <br>
-      <p class="text-center">
-        <%= paginate @articles %>
-      </p>
+      <%= paginate @articles %>
       <div class="articlesIndex" id="articlesIndex">
         <%= render 'show-articles', obj: @articles %>
       </div>

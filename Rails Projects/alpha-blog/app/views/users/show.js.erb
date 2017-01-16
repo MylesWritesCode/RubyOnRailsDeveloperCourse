@@ -3,7 +3,7 @@ $("<%= j render('articles/show-articles', obj: @user_articles) %>")
   .appendTo($("#showUserArticles"));
 
 // Update pagination link
-<% if @articles.last_page? %>
+<% if @user_articles.last_page? %>
   $('.pagination').html("That's all, folks!");
 <% else %>
   $('.pagination')

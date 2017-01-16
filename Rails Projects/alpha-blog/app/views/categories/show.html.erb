@@ -4,13 +4,14 @@
       <!-- Perhaps a sidebar? -->
     </div>
     <div class="col-md-6 offset-md-1">
-      <h1 class="text-center"><%= @category.name %></h1>
+      <h1 class="text-center mb-4"><%= @category.name %></h1>
       <div class="col-md-4 offset-md-4">
         <% if logged_in? %>
           <%= link_to "New Article", new_article_path, class: "btn btn-primary text-center btn-lg btn-block" %>
         <% end %>
       </div>
       <br>
+      <%= paginate @category_articles %>
       <div class="categoryArticles" id="categoryArticles">
         <%= render 'articles/show-articles', obj: @category_articles %>
       </div>

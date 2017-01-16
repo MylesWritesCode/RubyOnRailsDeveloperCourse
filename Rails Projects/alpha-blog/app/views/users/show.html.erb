@@ -14,6 +14,7 @@
     <%= @user.username %>'s Articles
   </h3>
   <hr>
+  <%= paginate @user_articles %>
   <div class="showUserArticles" id="showUserArticles">
     <%= render '/articles/show-articles', obj: @user_articles %>
   </div>

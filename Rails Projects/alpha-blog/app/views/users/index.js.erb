@@ -3,7 +3,7 @@ $("<%= j render('show-users') %>")
   .appendTo($("#usersIndex"));
 
 // Update pagination link
-<% if @lessons.last_page? %>
+<% if @users.last_page? %>
   $('.pagination').html("That's all, folks!");
 <% else %>
   $('.pagination')

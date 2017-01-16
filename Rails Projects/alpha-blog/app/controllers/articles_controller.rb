@@ -5,6 +5,10 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.order("id DESC").page(params[:page])
+    respond_to do |f|
+      f.html { render 'index' }
+      f.js { render layout: false }
+    end
   end
 
   def new
