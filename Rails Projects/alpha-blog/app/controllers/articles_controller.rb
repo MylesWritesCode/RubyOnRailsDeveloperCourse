@@ -6,8 +6,8 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.order("id DESC").paginate(page: params[:page], per_page: 10)
     respond_to do |f|
-      f.js { render layout: false }
       f.html
+      f.js { render layout: false }
     end
   end
 
