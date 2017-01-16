@@ -5,9 +5,9 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.order("id DESC").paginate(page: params[:page], per_page: 10)
-    respond_to do |format|
-      format.html
-      format.js { render layout: false }
+    respond_to do |f|
+      f.js { render layout: false }
+      f.html
     end
   end
 

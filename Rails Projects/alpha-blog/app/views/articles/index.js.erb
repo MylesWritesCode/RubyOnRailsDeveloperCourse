@@ -1,2 +1,3 @@
+// Endless Scrolling
 $('#articles').append("<%= escape_javascript render('show-articles', obj: @articles) %>");
 $('.pagination').replaceWith('<%= escape_javascript will_paginate(@articles) %>');
