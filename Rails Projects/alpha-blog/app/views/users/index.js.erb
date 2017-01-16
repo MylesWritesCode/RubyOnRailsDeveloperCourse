@@ -1,2 +1,3 @@
-$('#users').append("<%= escape_javascript render('show-users') %>");
+// Users Index
+$('#usersIndex').append("<%= escape_javascript render('show-users') %>");
 $('.pagination').replaceWith("<%= escape_javascript will_paginate(@users) %>");

@@ -1,2 +1,2 @@
-$('#articles').append("<%= escape_javascript render('articles/show-articles', obj: @category_articles) %>");
+$('#categoryArticles').append("<%= escape_javascript render('articles/show-articles', obj: @category_articles) %>");
 $('.pagination').replaceWith('<%= escape_javascript will_paginate(@category_articles) %>');

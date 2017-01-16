@@ -3,8 +3,10 @@
     <div class="col-md-2">
       <!-- Perhaps a sidebar? -->
     </div>
-    <div class="col-md-6 offset-md-1 users" id="users">
-      <%= render 'show-users' %>
+    <div class="col-md-6 offset-md-1 users">
+      <div class="usersIndex" id="usersIndex">
+        <%= render 'show-users' %>
+      </div>
       <%= will_paginate @users %>
     </div> <!-- col-md-8 -->
   </div> <!-- row -->

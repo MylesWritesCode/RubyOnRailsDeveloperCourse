@@ -11,7 +11,9 @@
         <% end %>
       </div>
       <br>
-      <%= render 'articles/show-articles', obj: @category_articles %>
+      <div class="categoryArticles" id="categoryArticles">
+        <%= render 'articles/show-articles', obj: @category_articles %>
+      </div>
       <%= will_paginate @category_articles %>
     </div> <!-- col-md-8 -->
   </div> <!-- row -->

@@ -1,4 +1,3 @@
-$(document).ready(function(){
-  $('#articles').append("<%= escape_javascript render('show-articles', obj: @articles) %>");
-  $('.pagination').replaceWith('<%= escape_javascript will_paginate(@articles) %>');
-});
+console.log("index.js.erb says hello.");
+$('#articlesIndex').append('<%= escape_javascript render("show-articles", obj: @articles) %>');
+$('.pagination').replaceWith('<%= escape_javascript will_paginate(@articles) %>');

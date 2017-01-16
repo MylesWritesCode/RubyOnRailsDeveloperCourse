@@ -11,7 +11,9 @@
         <% end %>
       </div>
       <br>
-      <%= render 'show-articles', obj: @articles %>
+      <div class="articlesIndex" id="articlesIndex">
+        <%= render 'show-articles', obj: @articles %>
+      </div>
       <%= will_paginate @articles %>
     </div> <!-- col-md-8 -->
   </div> <!-- row -->
