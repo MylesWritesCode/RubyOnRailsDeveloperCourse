@@ -4,10 +4,10 @@ class UsersController < ApplicationController
   before_action :require_admin, only: [:destroy]
 
   def index
-    @users = User.paginate(page: params[:page], per_page: 10)
-    respond_to do |format|
-      format.html
-      format.js { render layout: false }
+    @users = User.page(params[:page])
+    respond_to do |f|
+      f.html
+      f.js { render layout: false }
     end
   end
 
@@ -48,10 +48,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user_articles = @user.articles.order("id DESC").paginate(page: params[:page], per_page: 5)
-    respond_to do |format|
-      show.html
-      show.js { render format: false }
+    @user_articles = @user.articles.order("id DESC").page(params[:page])
+    respond_to do |f|
+      f.html
+      f.js { render format: false }
     end
   end
 

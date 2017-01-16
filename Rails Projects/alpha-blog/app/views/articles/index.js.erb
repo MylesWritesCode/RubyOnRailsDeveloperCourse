@@ -1,3 +1,11 @@
-console.log("index.js.erb says hello.");
-$('#articlesIndex').append('<%= escape_javascript render("show-articles", obj: @articles) %>');
-$('.pagination').replaceWith('<%= escape_javascript will_paginate(@articles) %>');
+// Append new data
+$("<%= j render('show-articles', obj: @articles) %>")
+  .appendTo($("#articlesIndex"));
+
+// Update pagination link
+<% if @articles.last_page? %>
+  $('.pagination').html("That's all, folks!");
+<% else %>
+  $('.pagination')
+    .html("<%= j link_to_next_page(@articles, 'Next Page', remote: true) %>");
+<% end %>
