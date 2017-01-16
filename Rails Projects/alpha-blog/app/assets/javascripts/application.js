@@ -15,6 +15,7 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.infinite-pages
 //= require_self
 //= require_tree .
 
