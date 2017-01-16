@@ -9,12 +9,13 @@
         <% if logged_in? %>
           <%= link_to "New Article", new_article_path, class: "btn btn-primary text-center btn-lg btn-block" %>
         <% end %>
+        <%= will_paginate @articles %>
       </div>
       <br>
       <div class="articlesIndex" id="articlesIndex">
         <%= render 'show-articles', obj: @articles %>
       </div>
-      <%= will_paginate @articles %>
+      <%= will_paginate @articles, remote: true %>
     </div> <!-- col-md-8 -->
   </div> <!-- row -->
 </div> <!-- container -->
