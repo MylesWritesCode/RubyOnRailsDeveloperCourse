@@ -1,24 +1,21 @@
-# README
+## Project Overview
+1. Authentication system with Devise.
+2. Users can track up to 10 stocks per user. Profile page will display current stock prices.
+3. Users can search for stock symbols using a search bar.
+4. Users can choose to add a stock from results to their profile.
+5. Users an look for friends in the app by name or email.
+6. Users can view portfolio of stocks from friends.
+7. Must be mobile friendly (Bootstrap 4 helps this easily).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Restrictions
+1. Fast development; Styling not important, but must be presentable
+2. No test framework required since this is prototyping.
+3. Focus on core functionality, time, and presentation
 
-Things you may want to cover:
+## Dependencies
+1. Bootstrap 4 - Styles
+3. PostgreSQL - DB for Heroku deployment
+4. Devise - User Authentication
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## TODO
+Will be filled out when project is completed.
