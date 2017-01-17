@@ -17,4 +17,4 @@ I'm not planning on doing any of these things, but should I decide to check up o
 1. Check why js.erb files don't work in production.
 2. Mailing list integration: I've done it before, but it'll be cool to add.
 3. Create a proper footer: Maybe with icons and all that jazz.
-4. Time since on posts: I've done this with the twitter clone in another course, just kinda want to do it here too.
+4. 'Time since' on posts: I've done this with the twitter clone in another course, just kinda want to do it here too.
