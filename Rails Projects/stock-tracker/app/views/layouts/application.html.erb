@@ -9,6 +9,29 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-toggleable-md navbar-light-bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <%= link_to "Finance Tracker", root_path, class: "navbar-brand" %>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto">
+          <div class="nav-item active">
+            <%= link_to "Stocks", "#", class: "nav-link" %>
+          </div>
+          <div class="nav-item">
+            <%= link_to "Users", "#", class: "nav-link" %>
+          </div>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <div class="col-md-4 offset-md-4" id="alerts">
+      <%= alert %>
+    </div>
     <%= yield %>
   </body>
 </html>
