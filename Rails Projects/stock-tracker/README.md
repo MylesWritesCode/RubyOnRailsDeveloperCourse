@@ -18,4 +18,6 @@
 4. Devise - User Authentication
 
 ## TODO
-Will be filled out when project is completed.
+1. Devise for authentication, with styling.
+2. Stock tracker gem.
+3. Users controller, model, and views.
