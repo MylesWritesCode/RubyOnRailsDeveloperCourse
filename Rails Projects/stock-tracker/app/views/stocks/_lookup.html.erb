@@ -1,0 +1,18 @@
+<div id="stock-lookup my-2">
+  <%= form_tag search_stocks_path, remote: true, method: :get, id: 'stock-lookup-form',
+        class: 'form-group form-inline my-auto' do %>
+    <%= text_field_tag :stock, params[:stock], placeholder: "Stock Ticker Symbol", autofocus: true,
+        class: "form-control mr-2" %>
+    <%= button_tag(type: :submit, class: "btn btn-outline-info") do %>
+      Find Stock
+    <% end %>
+  <% end %>
+
+  <% if @stock %>
+    <div id="stock-lookup-results" class="well results-block">
+      <strong>Symbol:</strong> <%= @stock.ticker %>
+      <strong>Name:</strong> <%= @stock.name %>
+      <strong>Price:</strong> <%= @stock.price %>
+    </div>
+  <% end %>
+</div>

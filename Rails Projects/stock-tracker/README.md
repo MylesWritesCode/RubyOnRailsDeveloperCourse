@@ -21,3 +21,9 @@
 1. Devise for authentication, with styling.
 2. Stock tracker gem.
 3. Users controller, model, and views.
+
+
+<%= form_for "SearchVariable", html: { class: "form-inline my-2 my-lg-0" } do |f| %>
+  <%= f.text_field :search, class: "form-control mr-sm-2", placeholder: "Search" %>
+  <%= button_to("Search", {}, { class: "btn btn-outline-info my-2 my-sm-0" }) %>
+<% end %>
