@@ -15,3 +15,12 @@
  */
 
 @import "bootstrap";
+
+#navbarAccountDropdown {
+  @extend .btn,
+          .btn-outline-primary,
+          .my-2,
+          .my-sm-0,
+          .ml-2,
+          .dropdown-toggle;
+}

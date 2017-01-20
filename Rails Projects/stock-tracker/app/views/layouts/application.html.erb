@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>StockTracker</title>
+    <title>Stock Tracker</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -28,6 +27,13 @@
           <%= button_to("Search", {}, { class: "btn btn-outline-info my-2 my-sm-0" }) %>
         <% end %>
         <% if user_signed_in? %>
+          <div class="nav-item dropdown">
+            <%= link_to("Account", "#", { id: "navbarAccountDropdown", 'data-toggle' => "dropdown" }) %>
+            <div class="dropdown-menu">
+              <%= link_to "Edit Account", "#", class: "dropdown-item" %>
+              <%= link_to "View Profile", "#", class: "dropdown-item" %>
+            </div>
+          </div> <!-- nav-item dropdown -->
           <%= link_to "Logout", destroy_user_session_path, class: "btn btn-outline-danger my-2 my-sm-0 ml-2", method: :delete %>
         <% else %>
           <%= content_tag :div, class: "btn-group ml-2" do %>
