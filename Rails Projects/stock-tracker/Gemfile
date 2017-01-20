@@ -35,6 +35,8 @@ gem 'bcrypt', '~> 3.1.11', platforms: :ruby
 gem 'bootstrap', '~> 4.0.0.alpha6'
 # Use Devise for user authentication
 gem 'devise'
+# Use stock_quote for Stocks
+gem 'stock_quote'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
