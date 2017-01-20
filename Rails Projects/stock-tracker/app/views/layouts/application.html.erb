@@ -27,14 +27,16 @@
           <%= button_to("Search", {}, { class: "btn btn-outline-info my-2 my-sm-0" }) %>
         <% end %>
         <% if user_signed_in? %>
-          <div class="nav-item dropdown">
+          <div class="dropdown form-inline">
+            <!-- Classes for this link are in SCSS via @extend -->
             <%= link_to("Account", "#", { id: "navbarAccountDropdown", 'data-toggle' => "dropdown" }) %>
             <div class="dropdown-menu">
               <%= link_to "Edit Account", "#", class: "dropdown-item" %>
               <%= link_to "View Profile", "#", class: "dropdown-item" %>
             </div>
           </div> <!-- nav-item dropdown -->
-          <%= link_to "Logout", destroy_user_session_path, class: "btn btn-outline-danger my-2 my-sm-0 ml-2", method: :delete %>
+          <!-- Classes for this link are in SCSS via @extend -->
+          <%= link_to "Logout", destroy_user_session_path, id: "btnLogout", method: :delete %>
         <% else %>
           <%= content_tag :div, class: "btn-group ml-2" do %>
             <%= link_to "Log In", new_user_session_path, class: "btn btn-outline-success my-2 my-sm-0" %>

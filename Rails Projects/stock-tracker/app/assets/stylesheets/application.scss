@@ -17,10 +17,9 @@
 @import "bootstrap";
 
 #navbarAccountDropdown {
-  @extend .btn,
-          .btn-outline-primary,
-          .my-2,
-          .my-sm-0,
-          .ml-2,
-          .dropdown-toggle;
+  @extend .btn, .btn-outline-primary, .my-2, .my-sm-0, .ml-2, .dropdown-toggle;
+}
+
+#btnLogout {
+  @extend .btn, .btn-outline-danger, .my-2, .my-sm-0, .ml-2;
 }
