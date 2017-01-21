@@ -12,6 +12,9 @@
       <h3><strong>Symbol:</strong> <%= @stock.ticker %></h3>
       <p><strong>Name:</strong> <%= @stock.name %></p>
       <p><strong>Price:</strong> <%= @stock.price %></p>
+      <p class="text-center">
+        <%= link_to "Add To Portfolio", user_stocks_path(user: current_user, stock_ticker: @stock.ticker, stock_id: @stock.id ? @stock.id : ''), class: 'btn btn-outline-success', method: :post %>
+      </p>
     </div>
   <% end %>
   <div id="stock-lookup-error">
