@@ -6,6 +6,7 @@
         class: "form-control mr-2 col-md-8" %>
     <%= button_to "Find Stock", {}, class: "btn btn-outline-success" %>
   <% end %>
+  <%= render 'common/spinner' %>
   <% if @stock %>
     <div id="stock-lookup-results" class="jumbotron my-2">
       <h3><strong>Symbol:</strong> <%= @stock.ticker %></h3>
@@ -14,6 +15,5 @@
     </div>
   <% end %>
   <div id="stock-lookup-error">
-
   </div>
 </div> <!-- stock-lookup my-2 -->
