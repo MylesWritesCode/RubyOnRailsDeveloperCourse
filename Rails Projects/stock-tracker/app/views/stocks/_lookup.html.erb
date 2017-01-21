@@ -7,10 +7,13 @@
     <%= button_to "Find Stock", {}, class: "btn btn-outline-success" %>
   <% end %>
   <% if @stock %>
-    <div id="stock-lookup-results" class="results-block my-2">
-      <strong>Symbol:</strong> <%= @stock.ticker %>
-      <strong>Name:</strong> <%= @stock.name %>
-      <strong>Price:</strong> <%= @stock.price %>
+    <div id="stock-lookup-results" class="jumbotron my-2">
+      <h3><strong>Symbol:</strong> <%= @stock.ticker %></h3>
+      <p><strong>Name:</strong> <%= @stock.name %></p>
+      <p><strong>Price:</strong> <%= @stock.price %></p>
     </div>
   <% end %>
+  <div id="stock-lookup-error">
+
+  </div>
 </div> <!-- stock-lookup my-2 -->
