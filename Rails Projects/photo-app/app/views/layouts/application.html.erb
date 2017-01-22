@@ -13,14 +13,14 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Photo App</a>
+        <%= link_to (fa_icon "camera-retro", text: "Photo App"), "#", class: "navbar-brand fa-lg" %>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav mr-auto">
             <div class="nav-item active">
-              <%= link_to(fa_icon "home", text: "Home"), "#", class: "nav-link" %>
+              <%= link_to (fa_icon "home", text: "Home"), "#", class: "nav-link fa-lg" %>
             </div>
             <div class="nav-item">
-              <%= link_to "Link", "#", class: "nav-link" %>
+              <%= link_to (fa_icon "user-circle", text: "Link"), "#", class: "nav-link fa-lg" %>
             </div>
           </div>
           <% if user_signed_in? %>
