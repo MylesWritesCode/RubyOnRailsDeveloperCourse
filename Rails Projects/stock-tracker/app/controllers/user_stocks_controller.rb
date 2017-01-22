@@ -73,7 +73,7 @@ class UserStocksController < ApplicationController
   def destroy
     @user_stock.destroy
     respond_to do |format|
-      format.html { redirect_to user_stocks_url }
+      format.html { redirect_to my_portfolio_path }
       format.json { head :no_content }
       flash[:success] = "Stock #{@user_stock.stock.ticker} was successfully deleted."
     end
