@@ -18,7 +18,12 @@
 @import 'font-awesome';
 
 nav.navbar {
-  background: transparent;
+  background: white;
+  border-bottom: 1px solid lightgrey;
+}
+
+.top-nav-menu {
+
 }
 
 .navbar-light .navbar-nav .nav-link {
