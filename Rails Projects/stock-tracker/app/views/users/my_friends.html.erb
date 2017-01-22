@@ -1,1 +1,32 @@
-Friends Page
+<div class="col-md-4 offset-md-4 my-5">
+  <%= render 'friends/lookup' %>
+</div>
+<div class="col-md-6 offset-md-3">
+  <% if @friendships.size > 0 %>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th colspan="2">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @friendships.each do |friend| %>
+          <tr>
+            <td><%= friend.full_name %></td>
+            <td><%= friend.email %></td>
+            <td>
+              <%= link_to 'View Profile', user_path(friend), class: "btn btn-primary btn-sm" %>
+            </td>
+            <td>
+              <%= link_to 'Unfollow', friendship_path(friend), method: :delete, class: "btn btn-danger btn-sm" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <h3 class="text-center">You don't have any friends yet. Please add some people via the search or users page.</h3>
+  <% end %>
+</div> <!-- col-md-8 offset-md-2 -->
