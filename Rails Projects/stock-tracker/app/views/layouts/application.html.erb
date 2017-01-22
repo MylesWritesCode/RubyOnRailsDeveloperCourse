@@ -31,6 +31,7 @@
             <!-- Classes for this link are in SCSS via @extend -->
             <%= link_to("Account", "#", { id: "navbarAccountDropdown", 'data-toggle' => "dropdown" }) %>
             <div class="dropdown-menu">
+              <%= link_to "My Friends", my_friends_path, class: "dropdown-item" %>
               <%= link_to "Edit Account", edit_user_registration_path, class: "dropdown-item" %>
               <%= link_to "View Profile", my_portfolio_path, class: "dropdown-item" %>
             </div>
