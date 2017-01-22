@@ -33,6 +33,8 @@ gem 'bcrypt', platforms: :ruby
 gem 'devise'
 # Use Bootstrap 4 for UI
 gem 'bootstrap'
+# Use Font Awesome for icons
+gem 'font-awesome-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
