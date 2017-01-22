@@ -1,0 +1,15 @@
+<h3 class="text-center">Public Profile</h3>
+<div class="col-md-10 offset-1">
+  <div class="jumbotron my-3">
+    <h4><%= @user.full_name %></h4>
+    <p><%= @user.email %></p>
+  </div>
+
+  <% if @user.stocks.size > 0 %>
+    <%= render 'stocks/list' %>
+  <% else %>
+    <p class="text-center">
+      This user is not tracking any stocks.
+    </p>
+  <% end %>
+</div> <!-- col-md-10 offset-1 -->

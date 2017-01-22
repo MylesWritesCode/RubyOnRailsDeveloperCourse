@@ -1,6 +1,6 @@
 <div id="friend-lookup" class="my-2">
   <h3 class="text-center my-5">Find Users</h3>
-  <%= form_tag search_friends_path(params[:friend]), remote: true, id: 'friend-lookup-form',
+  <%= form_tag search_friends_path, remote: true, id: 'friend-lookup-form',
         class: 'form-group form-inline my-auto', method: :get do %>
     <%= text_field_tag :search_param, params[:search_param], placeholder: "Name or Email", autofocus: true,
         class: "form-control mr-2 col-md-8" %>
@@ -11,19 +11,27 @@
     <% if @users.size > 0 %>
     <div id="friend-lookup-results" class="my-2">
       <table class="table table-striped">
-        <tr>
-          <td><strong>Name: </strong><%= @friend.ticker %></td>
-          <td><strong>Email: </strong><%= @friend.name %></td>
-          <td class="text-center">
-            <strong>Profile: </strong>
-            <%= link_to "Portfolio", user_path_path(user), class: 'btn btn-outline-primary' %>
-            <% if current_user.not_friends_with?(user.id) %>
-              <%= link_to "Add Friend", add_friend_path(user: current_user, friend: user), class: 'btn btn-outline-primary' %>
-            <% else %>
-              <span class="btn btn-outline-success">Friend</span>
-            <% end %>
-          </td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th colspan="2">Actions</th>
+        <tbody>
+          <% @users.each do |user| %>
+          <tr>
+            <td><%= user.full_name %></td>
+            <td><%= user.email %></td>
+            <td class="text-center">
+              <%= link_to "Portfolio", user_path(user), class: 'btn btn-primary btn-sm' %>
+              <% if current_user.not_friends_with?(user.id) %>
+                <%= link_to "Add Friend", add_friend_path(user: current_user, friend: user), class: 'btn btn-primary btn-sm', method: :post %>
+              <% else %>
+                <span class="btn btn-outline-success">Friend</span>
+              <% end %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
       </table>
     <% else %>
       <h3 class="text-center">No people match this search.</h3>
