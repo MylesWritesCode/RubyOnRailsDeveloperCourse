@@ -48,17 +48,20 @@
             </div>
           </nav>
         </div> <!-- col-md-8 -->
-        <nav class="navbar col-sm-2 hidden-xs-up">
-        </nav>
+        <!-- <nav class="navbar col-sm-2 hidden-xs-up">
+        </nav> -->
       </div> <!-- row -->
       <% if !current_page?(root_path) %>
-        <hr>
+      <div class="col-md-8 offset-2 my-5 px-0">
+        <%= render 'layouts/alerts' %>
+        <%= yield %>
+      </div> <!-- col-md-8 offset-2 -->
+      <% else %>
+        <div class="col-md-12 px-0">
+          <%= yield %>
+        </div>
       <% end %>
     </div> <!-- container-fluid -->
-    <div class="col-md-8 offset-2 my-5 px-0">
-      <%= render 'layouts/alerts' %>
-      <%= yield %>
-    </div> <!-- col-md-8 offset-2 -->
     <footer class="footer">
       <div class="container-fluid">
         <p class="text-right">

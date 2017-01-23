@@ -16,6 +16,7 @@
 
 @import 'bootstrap';
 @import 'font-awesome';
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 nav.navbar {
   background: white;
@@ -47,11 +48,33 @@ nav.navbar {
 .callToAction {
   background-image: asset-url('callToAction.jpg');
   background-size: cover;
-  height: 50%;
-  width: 100%;
-  background-repeat: no-repeat;
+  height: 750px;
+}
+
+.callToActionText {
+  top: 335px;
+  position: relative;
+  font-family: Montserrat, Helvetica;
+  font-size: 90px;
 }
 
 .checkbox-line {
   margin: 6px !important;
+}
+.quote-package{
+  border: 7px solid rgb(112, 213, 125);
+  background-color: white;
+  border-radius: 0px;
+}
+
+.gold-package {
+  border: 7px solid gold;
+  background-color: white;
+  border-radius: 0px;
+}
+
+.silver-package {
+  border: 7px solid silver;
+  background-color: white;
+  border-radius: 0px;
 }
