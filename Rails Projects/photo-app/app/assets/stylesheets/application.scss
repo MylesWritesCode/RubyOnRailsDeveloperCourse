@@ -25,6 +25,7 @@ nav.navbar {
 
 .border-solid-3 {
     border: 3px solid black;
+    border-radius: 0px;
 }
 
 .center-logo {
@@ -32,10 +33,6 @@ nav.navbar {
   position: fixed;
   left: 46%;
   top: 10px;
-}
-
-.navbar-brand {
-
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -62,6 +59,10 @@ nav.navbar {
   }
 }
 
+.transparent-white-bg {
+  background-color: rgba(245, 245, 245, 0.50);
+}
+
 .checkbox-line {
   margin: 6px !important;
 }
@@ -84,6 +85,8 @@ nav.navbar {
   height: 550px;
 }
 
-footer.footer.p {
-  font-size: 10px;
+footer.footer {
+  position: relative;
+    width: 100%;
+    bottom: 0;
 }

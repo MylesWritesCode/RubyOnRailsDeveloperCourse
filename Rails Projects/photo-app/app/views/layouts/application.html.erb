@@ -59,6 +59,7 @@
         </nav> -->
       </div> <!-- row -->
       <% if !current_page?(root_path) %>
+      <hr class="mr-5">
       <div class="col-xl-8 offset-xl-2 px-1">
         <%= render 'layouts/alerts' %>
         <%= yield %>
@@ -69,8 +70,8 @@
         </div>
       <% end %>
     </div> <!-- container-fluid -->
-    <hr>
     <footer class="footer">
+      <hr>
       <div class="container">
         <small>
           <p class="text-center">
