@@ -1,7 +1,19 @@
-<div class="col-md-8 offset-md-2 my-2 text-center">
+<div class="text-center">
   <% flash.each do |name, msg| %>
-    <%= content_tag :div, class: "alert alert-#{name}" do %>
-      <%= msg %>
+    <% if name == "notice" %>
+      <%= content_tag :div, class: "alert alert-info alert-dismissible fade show", role: "alert" do %>
+        <button type="button" class="close p-0" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p class="m-0"><%= msg %></p>
+      <% end %>
+    <% else %>
+      <%= content_tag :div, class: "alert alert-#{name} alert-dismissible fade show", role: "alert" do %>
+        <button type="button" class="close p-0" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p class="m-0"><%= msg %></p>
+      <% end %>
     <% end %>
   <% end %>
 </div>

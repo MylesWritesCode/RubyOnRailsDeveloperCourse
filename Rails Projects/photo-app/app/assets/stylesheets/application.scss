@@ -23,6 +23,15 @@ nav.navbar {
   border-bottom: 1px solid lightgrey;
 }
 
+.alert {
+  position: fixed;
+  top: 90px;
+  z-index: 1001;
+  width: 40%;
+  left: 30%;
+  border-radius: 0px;
+}
+
 .border-solid-3 {
     border: 3px solid black;
     border-radius: 0px;
