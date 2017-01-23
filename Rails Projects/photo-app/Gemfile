@@ -35,7 +35,8 @@ gem 'devise'
 gem 'bootstrap'
 # Use Font Awesome for icons
 gem 'font-awesome-rails'
-
+# Use dotenv for keys
+gem 'dotenv-rails', :groups => [:development, :test]
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

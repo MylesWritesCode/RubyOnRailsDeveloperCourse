@@ -8,6 +8,8 @@
 1. Bootstrap 4
 2. Devise
 3. Font Awesome
+4. SendGrid
+5. dotenv
 
 ## TODO
 

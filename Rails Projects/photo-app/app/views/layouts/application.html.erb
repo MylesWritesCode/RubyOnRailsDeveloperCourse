@@ -24,7 +24,7 @@
               <% end %>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div class="navbar-nav col-md-4 offset-md-2">
+              <div class="navbar-nav col-md-3 offset-md-2">
                 <div class="nav-item active">
                   <%= link_to (fa_icon "home", text: "Home"), root_path, class: "nav-link fa-lg" %>
                 </div>
@@ -54,6 +54,7 @@
     </div> <!-- container-fluid -->
     <div class="col-md-8 offset-2 my-5 px-0">
       <hr>
+      <%= render 'layouts/alerts' %>
       <%= yield %>
     </div> <!-- col-md-8 offset-2 -->
   </body>
