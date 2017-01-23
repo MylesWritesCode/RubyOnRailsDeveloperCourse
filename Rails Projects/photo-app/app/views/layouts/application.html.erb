@@ -12,11 +12,18 @@
         <!-- <nav class="navbar col-sm-2">
         </nav> -->
         <div class="top-nav-menu my-0 fixed-top">
-          <nav class="navbar navbar-toggleable-md navbar-light bg-white p-1">
+          <nav class="navbar navbar-toggleable-lg navbar-light bg-white p-1">
+            <div class="my-auto hidden-xl-up">
+              <%= link_to "#", class: "navbar-brand" do %>
+              PHOTO
+              <%= fa_icon "camera-retro" %>
+              APP
+              <% end %>
+            </div>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="center-logo">
+            <div class="center-logo col-md-1 hidden-lg-down">
               <%= link_to "#", class: "navbar-brand" do %>
               PHOTO
               <%= fa_icon "camera-retro" %>
@@ -24,7 +31,7 @@
               <% end %>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div class="navbar-nav col-md-3 offset-md-2">
+              <div class="navbar-nav col-xl-3 offset-xl-2">
                 <div class="nav-item active">
                   <%= link_to (fa_icon "home", text: "Home"), root_path, class: "nav-link fa-lg" %>
                 </div>
@@ -35,7 +42,7 @@
                   <%= link_to (fa_icon "user-circle", text: "Link"), "#", class: "nav-link fa-lg" %>
                 </div>
               </div>
-              <div class="navbar-nav offset-md-2 ml-auto">
+              <div class="navbar-nav offset-lg-2 ml-auto">
                 <% if user_signed_in? %>
                   <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-outline-danger my-sm-1 m-1" %>
                 <% else %>
@@ -43,31 +50,42 @@
                   <%= link_to "Log In", new_user_session_path, class: "btn btn-outline-primary my-sm-1 m-1" %>
                 <% end %>
               </div>
-              <div class="navbar-nav col-md-2">
+              <div class="navbar-nav col-xl-2">
               </div>
             </div>
           </nav>
-        </div> <!-- col-md-8 -->
+        </div> <!-- col-xl-8 -->
         <!-- <nav class="navbar col-sm-2 hidden-xs-up">
         </nav> -->
       </div> <!-- row -->
       <% if !current_page?(root_path) %>
-      <div class="col-md-8 offset-2 my-5 px-0">
+      <div class="col-xl-8 offset-xl-2 px-1">
         <%= render 'layouts/alerts' %>
         <%= yield %>
-      </div> <!-- col-md-8 offset-2 -->
+      </div> <!-- col-xl-8 offset-2 -->
       <% else %>
-        <div class="col-md-12 px-0">
+        <div class="col-xl-12 px-0">
           <%= yield %>
         </div>
       <% end %>
     </div> <!-- container-fluid -->
+    <hr>
     <footer class="footer">
-      <div class="container-fluid">
-        <p class="text-right">
-          <span class="text-muted align-right">&copy MylesWritesCode 2017</span>
-        </p>
-      </div> <!-- container-fluid -->
+      <div class="container">
+        <small>
+          <p class="text-center">
+            <%= link_to "Github", "https://www.github.com/MylesWritesCode", class: "text-muted" %> |
+            <%= link_to "Twitter", "https://www.twitter.com/@mylesberueda", class: "text-muted" %> |
+            <%= link_to "Google+", "https://plus.google.com/+mylesberueda", class: "text-muted" %>
+          </p>
+          <p class="text-left text-muted">
+            Aloha professor and class: If you have any questions on the design, just click on one of the links to contact me and I can walk you through or explain what's going on in this webapp. To everyone else: This is a fully functional Ruby on Rails web application with user authentication (<%= link_to "Devise", "https://github.com/plataformatec/devise" %>), a payment system (<%= link_to "Stripe", "https://stripe.com/" %>), and user profile functionality. Feel free to comment on this or let me know if you find any mistakes.
+          </p>
+          <p class="text-right">
+            <span class="text-muted align-right">&copy MylesWritesCode 2017</span>
+          </p>
+        </small>
+      </div> <!-- container -->
     </footer>
   </body>
 </html>

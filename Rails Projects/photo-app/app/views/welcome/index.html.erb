@@ -1,52 +1,59 @@
 <div class="row">
-  <div class="col-md-12 mx-0 px-0">
+  <div class="col-lg-12 mx-0 px-0">
     <div class="callToAction img-fluid" id="callToAction">
-      <div class="col-md-4 offset-md-4">
+      <div class="col-xl-4 offset-xl-4">
         <h1 class="text-center callToActionText">SHARE YOUR ADVENTURE</h1>
       </div>
     </div>
   </div>
 </div>
 <div class="row my-5">
-  <div class="col-md-6 offset-md-3">
+  <div class="col-xl-8 offset-xl-2">
     <div class="jumbotron quote-package">
       <h3 class="text-center">
-        DO SOMETHING WITH YOUR LIFE
+        A picture is worth a thousand words.
+        <footer class="blockquote-footer">
+          Tony Stark, Brooklyn-99 (2019)
+        </footer>
       </h3>
     </div>
     <hr class="mt-5">
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4 offset-md-4">
-    <h3 class="text-center mb-5">OUR PLANS</h3>
+  <div class="col-xl-4 offset-xl-4">
+    <h3 class="display-3 text-center mb-5">OUR PLANS</h3>
   </div>
-  <div class="col-md-3 offset-3">
+  <div class="col-xl-3 offset-xl-3">
     <div class="jumbotron silver-package">
-      <h3 class="text-center">TESTING</h3>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <%= link_to "Sign Up with Silver Package", "#", class: "btn btn-outline-primary btn-lg btn-block" %>
+      <h3 class="text-center">Professional<br>Package</h3>
+      <p class="text-left my-4">
+        <%= fa_icon "picture-o", text: "Unlimited Uploads", class: "fa-lg m-2" %><br>
+        <%= fa_icon "envelope-open", text: "Exclusive Forum Access", class: "fa-lg m-2" %><br>
+        <%= fa_icon "calendar-check-o", text: "Calendar Access", class: "fa-lg m-2" %><br>
+        <%= fa_icon "copyright", text: "Copyright Advice", class: "fa-lg m-2" %><br>
+        <%= fa_icon "podcast", text: "Podcast Access", class: "fa-lg m-2" %><br>
+        <br><br><br><br>
+      </p>
+      <p class="align-baseline">
+        <%= link_to "Pick Silver", "#", class: "btn btn-outline-primary btn-lg btn-block" %>
+      </p>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-xl-3">
     <div class="jumbotron gold-package">
-      <h3 class="text-center">THIS JUMBOTRON</h3>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <%= link_to "Sign Up with Gold Package", "#", class: "btn btn-outline-success btn-lg btn-block" %>
+      <h3 class="text-center">Studio<br>Package</h3>
+      <p class="text-left my-4">
+        <%= fa_icon "picture-o", text: "Unlimited Uploads", class: "fa-lg m-2" %><br>
+        <%= fa_icon "envelope-open", text: "Exclusive Forum Access", class: "fa-lg m-2" %><br>
+        <%= fa_icon "calendar-check-o", text: "Calendar Access", class: "fa-lg m-2" %><br>
+        <%= fa_icon "copyright", text: "Copyright Advice", class: "fa-lg m-2" %><br>
+        <%= fa_icon "podcast", text: "Podcast Access", class: "fa-lg m-2" %><br>
+        <%= fa_icon "area-chart", text: "Analytics", class: "fa-lg m-2" %><br>
+        <%= fa_icon "lock", text: "Private Albums", class: "fa-lg m-2" %><br>
+        <%= fa_icon "trophy", text: "Studio Contests", class: "fa-lg m-2" %><br>
+      </p>
+      <%= link_to "Pick Gold", "#", class: "btn btn-outline-success btn-lg btn-block" %>
     </div>
   </div>
 </div>

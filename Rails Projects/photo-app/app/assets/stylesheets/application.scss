@@ -35,7 +35,7 @@ nav.navbar {
 }
 
 .navbar-brand {
-  position: fixed;
+
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -48,7 +48,7 @@ nav.navbar {
 .callToAction {
   background-image: asset-url('callToAction.jpg');
   background-size: cover;
-  height: 750px;
+  height: 900px;
 }
 
 .callToActionText {
@@ -56,13 +56,16 @@ nav.navbar {
   position: relative;
   font-family: Montserrat, Helvetica;
   font-size: 90px;
+  background-color: rgba(245, 245, 245, 0.50);
+  @include media-breakpoint-down(xs) {
+    font-size: 48px;
+  }
 }
 
 .checkbox-line {
   margin: 6px !important;
 }
 .quote-package{
-  border: 7px solid rgb(112, 213, 125);
   background-color: white;
   border-radius: 0px;
 }
@@ -71,10 +74,16 @@ nav.navbar {
   border: 7px solid gold;
   background-color: white;
   border-radius: 0px;
+  height: 550px;
 }
 
 .silver-package {
   border: 7px solid silver;
   background-color: white;
   border-radius: 0px;
+  height: 550px;
+}
+
+footer.footer.p {
+  font-size: 10px;
 }
