@@ -1,5 +1,7 @@
-<p>Welcome <%= @email %>!</p>
-
-<p>You can confirm your account email through the link below:</p>
-
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<div class="col-md-5 mx-auto">
+  <div class="jumbotron my-5 border-solid-3">
+    <p>Welcome <%= @email %>!</p>
+    <p>You can confirm your account email through the link below:</p>
+    <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+  </div> <!-- jumbotron -->
+</div> <!-- col-md-5 offset-md-1 -->
