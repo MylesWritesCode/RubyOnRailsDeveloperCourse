@@ -22,8 +22,15 @@ nav.navbar {
   border-bottom: 1px solid lightgrey;
 }
 
-.top-nav-menu {
+.center-logo {
+  width: 100%;
+  position: fixed;
+  left: 48%;
+  top: 10px;
+}
 
+.navbar-brand {
+  position: fixed;
 }
 
 .navbar-light .navbar-nav .nav-link {
