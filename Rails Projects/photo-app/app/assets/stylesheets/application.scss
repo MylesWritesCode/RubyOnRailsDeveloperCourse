@@ -44,6 +44,14 @@ nav.navbar {
   }
 }
 
+.callToAction {
+  background-image: asset-url('callToAction.jpg');
+  background-size: cover;
+  height: 50%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
 .checkbox-line {
   margin: 6px !important;
 }
