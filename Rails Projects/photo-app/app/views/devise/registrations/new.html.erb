@@ -57,3 +57,7 @@
     </p>
   </div> <!-- jumbotron -->
 </div> <!-- col-md-5 offset-md-1 -->
+<!-- I have to add this here because it won't load from either the users.js, or the now deleted stripe.js file -->
+<script type="text/javascript">
+  Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content') );
+</script>

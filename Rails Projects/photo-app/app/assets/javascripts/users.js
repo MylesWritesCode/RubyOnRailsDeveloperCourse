@@ -6,7 +6,7 @@ $(document).ready(function(){
     $("#btnSignUpSubmit").click(function(e) {
       console.log("Registration function online...");
       // Set Stripe Publishable Key
-      Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content') );
+
       // Disable the submit button to prevent repeated clicks:
       e.preventDefault();
       $form.find('#btnSignUpSubmit').prop('disabled', true).val("Processing...");
