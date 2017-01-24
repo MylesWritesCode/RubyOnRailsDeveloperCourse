@@ -23,8 +23,29 @@
       <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
     </div>
 
+    <%= fields_for(:payment) do |p| %> <!-- form payments begin -->
+      <div class="form-group">
+        <%= p.label :card_number, "Card Number", data: { stripe: "label" } %>
+        <%= p.text_field :card_number, class: "form-control", required: "true", data: { stripe: "number" } %>
+      </div>
+      <div class="form-group">
+        <%= p.label :card_cvv, "Security Code", data: { stripe: "label" } %>
+        <%= p.text_field :card_cvv, class: "form-control", required: "true", data: { stripe: "cvv" } %>
+      </div>
+      <div class="form-group row">
+        <div class="col-12 text-center">
+          <%= p.label :card_expire, "Expiration Date", data: { stripe: "label" } %>
+        </div>
+        <div class="col-6 mx-auto">
+          <%= p.select :card_month, options_for_select(Payment.month_options), { include_blank: "Month" }, "data-stripe" => "exp-month", class: "form-control", required: true %>
+        </div>
+        <div class="col-6 mx-auto">
+          <%= p.select :card_year, options_for_select(Payment.year_options), { include_blank: "Year" }, data: { stripe: "exp-year" }, class: "form-control", required: true %>
+        </div>
+      </div> <!-- form-group row -->
+    <% end %> <!-- form payments end -->
     <div class="actions text-center">
-      <%= f.submit "Sign up", class: "btn btn-success" %>
+      <%= f.submit "Sign up", class: "btn btn-success mt-3" %>
     </div>
     <% end %>
     <p class="text-center mt-4">

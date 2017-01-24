@@ -37,6 +37,9 @@ gem 'bootstrap'
 gem 'font-awesome-rails'
 # Use dotenv for keys
 gem 'dotenv-rails', :groups => [:development, :test]
+# Use Stripe for payments
+gem 'stripe'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
