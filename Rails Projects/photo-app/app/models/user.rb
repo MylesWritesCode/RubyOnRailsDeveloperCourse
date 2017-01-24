@@ -3,6 +3,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_one :payment
-  accepts_nested_attributes_for :payment
+
+  attr_accessor :stripe_card_token
+
+  def save_with_subscription
+    if valid?
+      customer = Stripe::Customer.create(description: email, plan: "PA-0160", source: stripe_card_token)
+      self.stripe_customer_token = customer.id
+      save!
+    end
+  end
 end

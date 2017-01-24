@@ -37,10 +37,10 @@
           <%= label_tag :card_expire, "Expiration Date", data: { stripe: "label" } %>
         </div>
         <div class="col-6 mx-auto">
-          <%= select_month nil, { add_month_numbers: true}, {name: nil, id: "expMonth", class: "form-control", data: { stripe: "expMonth" } } %>
+          <%= select_month nil, { add_month_numbers: true}, { id: "expMonth", class: "form-control", data: { stripe: "expMonth" } } %>
         </div>
         <div class="col-6 mx-auto">
-          <%= select_year nil, { start_year: Date.today.year, end_year: Date.today.year + 15 }, { name: nil, id: "expYear", class: "form-control", data: { stripe: "expYear" } } %>
+          <%= select_year nil, { start_year: Date.today.year, end_year: Date.today.year + 15 }, { id: "expYear", class: "form-control", data: { stripe: "expYear" } } %>
         </div>
       </div> <!-- form-group row -->
       <!-- form payments end -->
