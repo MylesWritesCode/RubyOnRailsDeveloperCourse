@@ -4,11 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessor :stripe_card_token
+  attr_accessor :stripeToken
 
   def save_with_subscription
     if valid?
-      customer = Stripe::Customer.create(description: email, plan: "PA-0160", source: stripe_card_token)
+      customer = Stripe::Customer.create(email: email, plan: "PA-0160", source: stripeToken)
       self.stripe_customer_token = customer.id
       save!
     end

@@ -12,14 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170124072520) do
 
-  create_table "payments", force: :cascade do |t|
-    t.string   "email"
-    t.string   "token"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false

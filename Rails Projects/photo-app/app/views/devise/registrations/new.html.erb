@@ -26,18 +26,18 @@
       <!-- form payments begin -->
       <div class="form-group">
         <%= label_tag :card_number, "Card Number", data: { stripe: "label" } %>
-        <%= text_field_tag :card_number, nil, { class: "form-control", required: "true", data: { stripe: "number" } } %>
+        <%= text_field_tag :card_number, nil, { class: "form-control", required: "true", name: "user[card_number]", data: { stripe: "number" } } %>
       </div>
       <div class="form-group">
         <%= label_tag :card_cvc, "Security Code", data: { stripe: "label" } %>
-        <%= text_field_tag :card_cvc, nil, { class: "form-control", required: "true", data: { stripe: "cvc" } } %>
+        <%= text_field_tag :card_cvc, nil, { class: "form-control", required: "true", name: "user[card_cvc]", data: { stripe: "cvc" } } %>
       </div>
       <div class="form-group row">
         <div class="col-12 text-center">
           <%= label_tag :card_expire, "Expiration Date", data: { stripe: "label" } %>
         </div>
         <div class="col-6 mx-auto">
-          <%= select_month nil, { add_month_numbers: true}, { id: "expMonth", class: "form-control", data: { stripe: "expMonth" } } %>
+          <%= select_month nil, { add_month_numbers: true }, { id: "expMonth", class: "form-control", data: { stripe: "expMonth" } } %>
         </div>
         <div class="col-6 mx-auto">
           <%= select_year nil, { start_year: Date.today.year, end_year: Date.today.year + 15 }, { id: "expYear", class: "form-control", data: { stripe: "expYear" } } %>
