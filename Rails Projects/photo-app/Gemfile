@@ -39,6 +39,12 @@ gem 'font-awesome-rails'
 gem 'dotenv-rails', :groups => [:development, :test]
 # Use Stripe for payments
 gem 'stripe'
+# For image uploads
+gem 'carrierwave'
+# For image resize
+gem 'mini_magick'
+# For images in production
+gem 'fog'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
