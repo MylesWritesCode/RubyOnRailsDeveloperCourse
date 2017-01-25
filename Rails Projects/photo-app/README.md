@@ -10,9 +10,12 @@ Just don't make this look like all the other websites I've made so far. Start of
 3. Font Awesome
 4. SendGrid
 5. dotenv
+6. CarrierWave
+7. mini_magick
+8. fog
 
 ## TODO
 1. Devise
 2. Styling Devise
 3. Confirmation Email (SendGrid)
-4.
+4. Stripe Payments

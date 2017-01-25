@@ -54,7 +54,7 @@ nav.navbar {
 .callToAction {
   background-image: asset-url('callToAction.jpg');
   background-size: cover;
-  height: 900px;
+  height: 960px;
 }
 
 .callToActionText {
@@ -75,6 +75,7 @@ nav.navbar {
 .checkbox-line {
   margin: 6px !important;
 }
+
 .quote-package{
   background-color: white;
   border-radius: 0px;
@@ -84,14 +85,18 @@ nav.navbar {
   border: 7px solid gold;
   background-color: white;
   border-radius: 0px;
-  height: 550px;
+  // height: 550px;
 }
 
 .silver-package {
   border: 7px solid silver;
   background-color: white;
   border-radius: 0px;
-  height: 550px;
+  // height: 550px;
+}
+
+.spacer {
+  height: 58px;
 }
 
 footer.footer {
