@@ -54,11 +54,11 @@ nav.navbar {
 .callToAction {
   background-image: asset-url('callToAction.jpg');
   background-size: cover;
-  height: 960px;
+  height: 100vh;
 }
 
 .callToActionText {
-  top: 335px;
+  top: 400px;
   position: relative;
   font-family: Montserrat, Helvetica;
   font-size: 90px;

@@ -13,7 +13,11 @@
     <% end %>
   </head>
   <body>
-    <div class="container-fluid">
+    <% if current_page?(root_path)  %>
+      <div class="container-fluid">
+    <% else %>
+      <div class="container-fluid px-0">
+    <% end %>
       <div class="row">
         <!-- <nav class="navbar col-sm-2">
         </nav> -->
@@ -66,7 +70,7 @@
       </div> <!-- row -->
       <% if !current_page?(root_path) %>
       <hr class="mr-5">
-      <div class="col-xl-8 offset-xl-2 px-1">
+      <div class="col-xl-8 offset-xl-2 px-1 my-5">
         <%= render 'layouts/alerts' %>
         <%= yield %>
       </div> <!-- col-xl-8 offset-2 -->
