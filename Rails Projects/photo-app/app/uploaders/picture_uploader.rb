@@ -2,7 +2,7 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   include CarrierWave::MiniMagick
   # This is to limit the size of the images being uploaded, since we're using S3 and I don't want to get charged.
-  process resize_to_limit: [300, 300]
+  # process resize_to_limit: [300, 300]
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
