@@ -1,7 +1,7 @@
 class Image < ApplicationRecord
   validate :picture_size
   belongs_to :user
-  mount_uploader :picture, PictureUploader\
+  mount_uploader :picture, PictureUploader
 
   private
 
