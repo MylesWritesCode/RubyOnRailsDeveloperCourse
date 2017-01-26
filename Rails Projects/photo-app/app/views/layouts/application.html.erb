@@ -13,11 +13,7 @@
     <% end %>
   </head>
   <body>
-    <% if current_page?(root_path)  %>
-      <div class="container-fluid">
-    <% else %>
-      <div class="container-fluid px-0">
-    <% end %>
+    <div class="container-fluid px-0">
       <div class="row">
         <!-- <nav class="navbar col-sm-2">
         </nav> -->
@@ -46,7 +42,7 @@
                   <%= link_to (fa_icon "home", text: "Home"), root_path, class: "nav-link fa-lg" %>
                 </div>
                 <div class="nav-item">
-                  <%= link_to (fa_icon "user-circle", text: "Link"), "#", class: "nav-link fa-lg" %>
+                  <%= link_to (fa_icon "camera", text: "Images"), images_path, class: "nav-link fa-lg" %>
                 </div>
                 <div class="nav-item">
                   <%= link_to (fa_icon "user-circle", text: "Link"), "#", class: "nav-link fa-lg" %>
@@ -75,7 +71,7 @@
         <%= yield %>
       </div> <!-- col-xl-8 offset-2 -->
       <% else %>
-        <div class="col-xl-12 px-0">
+        <div class="col-xl-12">
           <%= render 'layouts/alerts' %>
           <%= yield %>
         </div>
