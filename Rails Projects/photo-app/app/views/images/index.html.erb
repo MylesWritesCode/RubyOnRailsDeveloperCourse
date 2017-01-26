@@ -1,14 +1,11 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Images</h1>
-
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Picture</th>
       <th>User</th>
-      <th colspan="3"></th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -17,7 +14,7 @@
       <tr>
         <td><%= image.name %></td>
         <td><%= image.picture %></td>
-        <td><%= image.user %></td>
+        <td><%= image.user.email %></td>
         <td><%= link_to 'Show', image %></td>
         <td><%= link_to 'Edit', edit_image_path(image) %></td>
         <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,7 +22,14 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-
 <%= link_to 'New Image', new_image_path %>
+
+<div class="d flex-align-content-center flex-wrap">
+  <hr class="mt-5">
+  <h3 class="display-4 text-center">OR</h3>
+  <hr class="mb-5">
+</div>
+<% @images.each do |image| %>
+  <!-- Some code here... -->
+<% end %>
