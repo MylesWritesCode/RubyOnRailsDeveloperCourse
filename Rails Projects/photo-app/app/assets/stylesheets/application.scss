@@ -18,6 +18,12 @@
 @import 'font-awesome';
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+a {
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
 nav.navbar {
   background: white;
   border-bottom: 1px solid lightgrey;
@@ -97,6 +103,16 @@ nav.navbar {
 
 .spacer {
   height: 58px;
+}
+
+.index-grid {
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+  border-radius: 0;
+  &:hover {
+    border: 1px solid rgb(81, 170, 203);
+  }
 }
 
 footer.footer {

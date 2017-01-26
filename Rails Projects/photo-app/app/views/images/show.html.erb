@@ -1,13 +1,17 @@
 <div class="my-5 pt-5 pb-0">
   <h3 class="text-center display-4">
-    <%= @image.name %>
-    <strong>by </strong>
-    <%= @image.user.email %>
+    <%= @image.name if @image.name? %>
   </h3>
 </div>
 <div class="text-center">
   <%= image_tag(@image.picture.url, class: "img-fluid mx-auto") if @image.picture? %>
-  <br>
-  <%= link_to 'Edit', edit_image_path(@image) %> |
+  <br><br>
+  <p class="text-right">
+    by <%= @image.user.email %>
+  </p>
+  <% if @image.user.id == current_user.id %>
+    <%= link_to 'Delete', image_path(@image), method: :delete %> |
+    <%= link_to 'Edit', edit_image_path(@image) %> |
+  <% end %>
   <%= link_to 'Back', images_path %>
 </div>
